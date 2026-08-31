@@ -1,5 +1,4 @@
 package com.example.spring_jwt_auth_example.web.controller;
-
 import com.example.spring_jwt_auth_example.exception.AlreadyExistsException;
 import com.example.spring_jwt_auth_example.repository.UserRepository;
 import com.example.spring_jwt_auth_example.security.SecurityService;
@@ -22,7 +21,7 @@ public class AuthController {
     private final SecurityService securityService;
 
     @PostMapping("/sign-in")
-    public ResponseEntity<AuthResponse> authUser(LoginRequest loginRequest){
+    public ResponseEntity<AuthResponse> authUser(@RequestBody LoginRequest loginRequest){
         return ResponseEntity.ok(securityService.authenticateUser(loginRequest));
     }
 

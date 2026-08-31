@@ -11,10 +11,10 @@ import java.util.Date;
 @Slf4j
 public class JwtUtils {
 
-    @Value("${p.jwt.secret}")
+    @Value("${app.jwt.secret}")
     private String jwtSecret;
 
-    @Value("${p.jwt.tokenExpiration}")
+    @Value("${app.jwt.tokenExpiration}")
     private Duration tokenExpiration;
 
     public String generateJwtToken(AppUserDetails userDetails){
@@ -38,7 +38,7 @@ public class JwtUtils {
     public boolean validate (String authToken){
         try {
             Jwts.parser().setSigningKey(jwtSecret)
-                    .parsePlaintextJws(authToken);
+                    .parseClaimsJws(authToken);
             return true;
         } catch (SignatureException e) {
             log.error("Invalid signature: {}", e.getMessage());

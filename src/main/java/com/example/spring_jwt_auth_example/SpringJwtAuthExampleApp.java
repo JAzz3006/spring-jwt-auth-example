@@ -1,5 +1,4 @@
-package com.example.spring_basic_auth_example;
-
+package com.example.spring_jwt_auth_example;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpringJwtAuthExampleApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(com.example.spring_basic_auth_example.SpringJwtAuthExampleApp.class, args);
+		SpringApplication.run(com.example.spring_jwt_auth_example.SpringJwtAuthExampleApp.class, args);
 	}
-
 }

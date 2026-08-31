@@ -6,10 +6,10 @@ spring:
   jpa:
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5433/user_db?currentSchema=secure_schema
+    url: jdbc:postgresql://localhost:5433/app_db?currentSchema=secure_schema
     username: postgres
     password: postgres
     hikari:
